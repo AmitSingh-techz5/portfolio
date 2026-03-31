@@ -13,12 +13,13 @@ html { scroll-behavior: smooth; }
 
 </head>
 
-<body class="bg-gray-900 text-white">
+<body class="bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white">
 
 <!-- NAVBAR -->
-<nav class="fixed w-full bg-black/60 backdrop-blur p-4 flex justify-between z-50">
-  <h1 class="font-bold text-lg">Amit Singh</h1>
-  <div class="space-x-4 hidden md:block">
+<nav class="fixed w-full z-50 backdrop-blur-lg bg-white/5 border-b border-white/10 px-6 py-4 flex justify-between items-center">
+  <h1 class="text-xl font-bold tracking-wide">Amit Singh</h1>
+
+  <div class="space-x-6 hidden md:block">
     <a href="#about" class="hover:text-blue-400">About</a>
     <a href="#skills" class="hover:text-blue-400">Skills</a>
     <a href="#projects" class="hover:text-blue-400">Projects</a>
@@ -27,165 +28,234 @@ html { scroll-behavior: smooth; }
 </nav>
 
 <!-- HERO -->
-<section class="h-screen flex items-center justify-center text-center relative">
+<section class="min-h-screen flex items-center justify-center text-center px-6">
 
-  <!-- Background -->
-  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475"
-       class="absolute w-full h-full object-cover opacity-30">
+  <div class="max-w-3xl">
 
-  <div class="absolute inset-0 bg-black/60"></div>
-
-  <div class="relative z-10 px-4">
-    <!-- YOUR IMAGE -->
     <img src="amit_img.jpg"
-         class="w-40 h-40 object-cover rounded-full border-4 border-blue-500 mx-auto mb-6 shadow-lg">
+         class="w-40 h-40 object-cover rounded-full border-4 border-blue-500 mx-auto shadow-lg mb-6">
 
-    <h1 class="text-5xl md:text-6xl font-bold">Amit Singh</h1>
+    <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+      Hi, I'm <span class="text-blue-400">Amit Singh</span>
+    </h1>
 
-    <p class="text-gray-300 mt-4 text-xl">
+    <p class="text-gray-400 mt-4 text-lg">
       Java Full Stack Developer | Spring Boot | AWS | Microservices
     </p>
 
-    <div class="mt-6 flex flex-wrap justify-center gap-4">
-      <a href="#projects" class="bg-blue-500 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600">
-        View Projects
-      </a>
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
 
-      <a href="resume.pdf" class="border px-6 py-3 rounded-lg hover:bg-white hover:text-black">
-        Download Resume
-      </a>
-    </div>
+  <a href="#projects"
+     class="bg-blue-500 px-6 py-3 rounded-xl shadow-lg hover:bg-blue-600 hover:scale-105 transition flex items-center gap-2">
+     <img src="https://img.icons8.com/ios-filled/20/ffffff/project.png"/>
+     View Projects
+  </a>
+
+  <a href="resume.pdf"
+     class="border border-white/20 px-6 py-3 rounded-xl hover:bg-white hover:text-black transition flex items-center gap-2">
+     <img src="https://img.icons8.com/ios-filled/20/ffffff/resume.png"/>
+     Resume
+  </a>
+
+  <a href="https://github.com/AmitSingh-techz5"
+     target="_blank"
+     class="border border-white/20 px-6 py-3 rounded-xl hover:bg-white hover:text-black transition flex items-center gap-2">
+     <img src="https://img.icons8.com/ios-glyphs/20/ffffff/github.png"/>
+     GitHub
+  </a>
+
+  <a href="https://www.linkedin.com/in/amitsinghtechz/"
+     target="_blank"
+     class="bg-white text-black px-6 py-3 rounded-xl hover:scale-105 transition flex items-center gap-2">
+     <img src="https://img.icons8.com/ios-filled/20/000000/linkedin.png"/>
+     LinkedIn
+  </a>
+
+</div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="max-w-6xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-10 items-center">
+<section id="about" class="max-w-6xl mx-auto py-20 px-6">
 
-  <img src="https://images.unsplash.com/photo-1581090700227-1e8a3f5a4c2b"
-       class="rounded-xl shadow-lg">
+  <div class="grid md:grid-cols-2 gap-12 items-center">
 
-  <div>
-    <h2 class="text-3xl font-bold mb-4">About Me</h2>
-    <p class="text-gray-400 leading-relaxed">
-      Java Full Stack Developer with strong backend expertise in building scalable
-      microservices using Spring Boot and REST APIs. Experienced in deploying
-      applications on AWS and OpenShift using Docker & Kubernetes.
-    </p>
+    <!-- LOGOS (NO BOX / CLEAN LOOK) -->
+    <div class="flex flex-col items-center justify-center gap-10">
+
+      <!-- IBM -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"
+           class="w-40 opacity-80 hover:opacity-100 hover:scale-105 transition duration-300">
+
+      <!-- DBS -->
+      <img src="https://cdn.brandfetch.io/idvLc1clqp/w/180/h/180/theme/dark/icon.png?c=1dxbfHSJFAPEGdCLU4o5B"
+           class="w-24 opacity-90 hover:opacity-100 hover:scale-105 transition duration-300">
+
+      <p class="text-gray-500 text-sm text-center">
+        Enterprise Banking & Cloud Transformation
+      </p>
+
+    </div>
+
+    <!-- TEXT -->
+    <div>
+
+      <h2 class="text-4xl font-bold mb-6">About Me</h2>
+
+      <p class="text-gray-300 text-lg leading-relaxed mb-4">
+        Software Engineer with <span class="text-blue-400 font-semibold">7+ years of experience</span>
+        in building applications from concept to completion, delivering scalable and high-performance systems.
+      </p>
+
+      <p class="text-gray-400 leading-relaxed mb-4">
+        Skilled in designing <span class="text-white">microservices architectures</span>,
+        developing backend systems using <span class="text-white">Spring Boot</span>,
+        and working with modern cloud platforms.
+      </p>
+
+      <p class="text-gray-400 leading-relaxed mb-6">
+        Currently contributing to <span class="text-blue-400">digital banking transformation</span>
+        projects for <span class="text-white font-medium">DBS Bank</span> as part of
+        <span class="text-white font-medium">IBM India Pvt. Ltd.</span>,
+        building enterprise-grade financial applications.
+      </p>
+
+      <!-- TAGS -->
+      <div class="flex flex-wrap gap-3 mt-4">
+
+        <span class="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-xl text-sm">
+          7+ Years Experience
+        </span>
+
+        <span class="bg-white/10 px-4 py-2 rounded-xl text-sm">
+          Microservices
+        </span>
+
+        <span class="bg-white/10 px-4 py-2 rounded-xl text-sm">
+          Spring Boot
+        </span>
+
+        <span class="bg-white/10 px-4 py-2 rounded-xl text-sm">
+          AWS & Cloud
+        </span>
+
+        <span class="bg-white/10 px-4 py-2 rounded-xl text-sm">
+          Banking Domain
+        </span>
+
+      </div>
+
+    </div>
+
   </div>
 
 </section>
-
 <!-- SKILLS -->
-<section id="skills" class="bg-gray-800 py-16">
-  <h2 class="text-3xl font-bold text-center mb-10">Technical Skills</h2>
+<section id="skills" class="py-20">
 
-  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6">
+  <h2 class="text-4xl font-bold text-center mb-12">Technical Skills</h2>
 
-    <div class="bg-gray-700 p-6 rounded-xl text-center hover:scale-105 transition">
-      <img src="https://img.icons8.com/color/96/java-coffee-cup-logo.png" class="mx-auto mb-3">
-      <h3 class="font-semibold text-lg">Backend</h3>
-      <p class="text-gray-400 text-sm mt-2">
-        Java, Spring Boot, Microservices, REST APIs
-      </p>
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
+
+    <div class="bg-white/5 backdrop-blur rounded-2xl p-6 text-center hover:scale-105 hover:shadow-blue-500/20 transition">
+      <img src="https://img.icons8.com/color/96/java-coffee-cup-logo.png" class="mx-auto">
+      <h3 class="text-xl font-semibold mt-4">Backend</h3>
+      <p class="text-gray-400 mt-2">Java, Spring Boot, REST APIs, Microservices</p>
     </div>
 
-    <div class="bg-gray-700 p-6 rounded-xl text-center hover:scale-105 transition">
-      <img src="https://img.icons8.com/color/96/amazon-web-services.png" class="mx-auto mb-3">
-      <h3 class="font-semibold text-lg">Cloud</h3>
-      <p class="text-gray-400 text-sm mt-2">
-        AWS, OCP, Docker, Kubernetes, CI/CD
-      </p>
+    <div class="bg-white/5 backdrop-blur rounded-2xl p-6 text-center hover:scale-105 hover:shadow-blue-500/20 transition">
+      <img src="https://img.icons8.com/color/96/amazon-web-services.png" class="mx-auto">
+      <h3 class="text-xl font-semibold mt-4">Cloud</h3>
+      <p class="text-gray-400 mt-2">AWS, Docker, Kubernetes, OpenShift</p>
     </div>
 
-    <div class="bg-gray-700 p-6 rounded-xl text-center hover:scale-105 transition">
-      <img src="https://img.icons8.com/color/96/react-native.png" class="mx-auto mb-3">
-      <h3 class="font-semibold text-lg">Frontend</h3>
-      <p class="text-gray-400 text-sm mt-2">
-        React JS, Redux, JavaScript
-      </p>
+    <div class="bg-white/5 backdrop-blur rounded-2xl p-6 text-center hover:scale-105 hover:shadow-blue-500/20 transition">
+      <img src="https://img.icons8.com/color/96/react-native.png" class="mx-auto">
+      <h3 class="text-xl font-semibold mt-4">Frontend</h3>
+      <p class="text-gray-400 mt-2">React JS, JavaScript, HTML, CSS</p>
     </div>
 
   </div>
+
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="max-w-6xl mx-auto py-16 px-6">
-  <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+<section id="projects" class="max-w-6xl mx-auto py-20 px-6">
 
-  <div class="grid md:grid-cols-3 gap-6">
+  <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
 
-    <div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-105 transition">
-      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- CARD -->
+    <div class="bg-white/5 backdrop-blur rounded-2xl overflow-hidden hover:scale-105 hover:shadow-xl transition">
+      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" class="h-44 w-full object-cover">
       <div class="p-5">
-        <h3 class="text-xl font-semibold">Banking Microservices</h3>
-        <p class="text-gray-400 mt-2">Spring Boot, Kafka, Distributed Systems</p>
-        <a href="#" class="text-blue-400 text-sm mt-3 inline-block">View Code →</a>
+        <h3 class="text-xl font-semibold">Employee Management System</h3>
+        <p class="text-gray-400 text-sm mt-2">Spring Boot + React full stack app</p>
+        <div class="mt-3 text-sm">
+          <a href="https://github.com/AmitSingh-techz5/employee-system-api" class="text-blue-400">Backend →</a>
+          <a href="https://github.com/AmitSingh-techz5/employee-management-system-ui" class="text-green-400 ml-4">Frontend →</a>
+        </div>
       </div>
     </div>
 
-    <div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-105 transition">
-      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d1">
+    <div class="bg-white/5 backdrop-blur rounded-2xl overflow-hidden hover:scale-105 hover:shadow-xl transition">
+      <img src="https://images.unsplash.com/photo-1580894908361-967195033215" class="h-44 w-full object-cover">
       <div class="p-5">
-        <h3 class="text-xl font-semibold">Cloud Deployment</h3>
-        <p class="text-gray-400 mt-2">AWS, Docker, Kubernetes</p>
-        <a href="#" class="text-blue-400 text-sm mt-3 inline-block">View Code →</a>
+        <h3 class="text-xl font-semibold">Employee REST API</h3>
+        <p class="text-gray-400 text-sm mt-2">Spring Boot backend APIs</p>
+        <a href="https://github.com/AmitSingh-techz5/employee-rest-backendNew"
+           class="text-blue-400 mt-3 inline-block text-sm">View Code →</a>
       </div>
     </div>
 
-    <div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-105 transition">
-      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+    <div class="bg-white/5 backdrop-blur rounded-2xl overflow-hidden hover:scale-105 hover:shadow-xl transition">
+      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" class="h-44 w-full object-cover">
       <div class="p-5">
-        <h3 class="text-xl font-semibold">Full Stack App</h3>
-        <p class="text-gray-400 mt-2">React + Spring Boot</p>
-        <a href="#" class="text-blue-400 text-sm mt-3 inline-block">View Code →</a>
+        <h3 class="text-xl font-semibold">Employee UI Dashboard</h3>
+        <p class="text-gray-400 text-sm mt-2">React UI dashboard</p>
+        <a href="https://github.com/AmitSingh-techz5/employee-ui-app-new"
+           class="text-blue-400 mt-3 inline-block text-sm">View Code →</a>
       </div>
     </div>
 
   </div>
+
 </section>
 
-<!-- FOOTER -->
-<footer id="contact" class="bg-black text-gray-300 py-12">
+<!-- CONTACT -->
+<footer id="contact" class="border-t border-white/10 py-12">
 
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
 
     <div>
-      <h2 class="text-2xl font-bold text-white">Amit Singh</h2>
-      <p class="mt-3 text-gray-400">
-        Java Full Stack Developer specializing in scalable backend systems,
-        cloud deployments, and modern applications.
-      </p>
+      <h2 class="text-2xl font-bold">Amit Singh</h2>
+      <p class="text-gray-400 mt-3">Building scalable modern applications.</p>
     </div>
 
     <div>
-      <h3 class="text-lg font-semibold text-white mb-3">Quick Links</h3>
-      <ul class="space-y-2">
-        <li><a href="#about" class="hover:text-blue-400">About</a></li>
-        <li><a href="#skills" class="hover:text-blue-400">Skills</a></li>
-        <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
+      <h3 class="font-semibold mb-3">Links</h3>
+      <ul class="space-y-2 text-gray-400">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
       </ul>
     </div>
 
     <div>
-      <h3 class="text-lg font-semibold text-white mb-3">Contact</h3>
-      <p>Email: amitsinghtechz6@gmail.com</p>
-      <p>Mobile: +91 7906791280</p>
+      <h3 class="font-semibold mb-3">Contact</h3>
+      <p class="text-gray-400">Email: amitsinghtechz6@gmail.com</p>
+      <p class="text-gray-400">Phone: +91 7906791328</p>
 
-      <div class="flex space-x-4 mt-4">
-        <a href="https://github.com/AmitSingh-techz5" class="hover:text-blue-400">GitHub</a>
-        <a href="https://www.linkedin.com/in/amitsinghtechz/" class="hover:text-blue-400">LinkedIn</a>
+      <div class="flex gap-4 mt-4">
+        <a href="https://github.com/AmitSingh-techz5">GitHub</a>
+        <a href="https://www.linkedin.com/in/amitsinghtechz/">LinkedIn</a>
       </div>
-
-      <a href="resume.pdf"
-         class="inline-block mt-4 bg-blue-500 px-4 py-2 rounded-lg text-white hover:bg-blue-600">
-        Download Resume
-      </a>
     </div>
 
   </div>
 
-  <div class="text-center text-gray-500 mt-10 border-t border-gray-800 pt-4">
-    © 2026 Amit Singh. All rights reserved.
+  <div class="text-center text-gray-500 mt-10">
+    © 2026 Amit Singh
   </div>
 
 </footer>
