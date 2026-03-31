@@ -16,25 +16,29 @@ html { scroll-behavior: smooth; }
 <body class="bg-gray-900 text-white">
 
 <!-- NAVBAR -->
-<nav class="fixed w-full bg-black/50 backdrop-blur p-4 flex justify-between z-50">
+<nav class="fixed w-full bg-black/60 backdrop-blur p-4 flex justify-between z-50">
   <h1 class="font-bold text-lg">Amit Singh</h1>
-  <div class="space-x-4">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+  <div class="space-x-4 hidden md:block">
+    <a href="#about" class="hover:text-blue-400">About</a>
+    <a href="#skills" class="hover:text-blue-400">Skills</a>
+    <a href="#projects" class="hover:text-blue-400">Projects</a>
+    <a href="#contact" class="hover:text-blue-400">Contact</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="h-screen flex items-center justify-center text-center relative">
 
+  <!-- Background -->
   <img src="https://images.unsplash.com/photo-1518770660439-4636190af475"
        class="absolute w-full h-full object-cover opacity-30">
 
-  <div class="relative z-10">
-    <img src="https://i.pravatar.cc/150"
-         class="rounded-full border-4 border-blue-500 mx-auto mb-6">
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <div class="relative z-10 px-4">
+    <!-- YOUR IMAGE -->
+    <img src="amit_img.jpg"
+         class="w-40 h-40 object-cover rounded-full border-4 border-blue-500 mx-auto mb-6 shadow-lg">
 
     <h1 class="text-5xl md:text-6xl font-bold">Amit Singh</h1>
 
@@ -42,12 +46,12 @@ html { scroll-behavior: smooth; }
       Java Full Stack Developer | Spring Boot | AWS | Microservices
     </p>
 
-    <div class="mt-6 space-x-4">
-      <a href="#projects" class="bg-blue-500 px-6 py-3 rounded-lg shadow-lg">
+    <div class="mt-6 flex flex-wrap justify-center gap-4">
+      <a href="#projects" class="bg-blue-500 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600">
         View Projects
       </a>
 
-      <a href="resume.pdf" class="border px-6 py-3 rounded-lg">
+      <a href="resume.pdf" class="border px-6 py-3 rounded-lg hover:bg-white hover:text-black">
         Download Resume
       </a>
     </div>
@@ -62,7 +66,7 @@ html { scroll-behavior: smooth; }
 
   <div>
     <h2 class="text-3xl font-bold mb-4">About Me</h2>
-    <p class="text-gray-400">
+    <p class="text-gray-400 leading-relaxed">
       Java Full Stack Developer with strong backend expertise in building scalable
       microservices using Spring Boot and REST APIs. Experienced in deploying
       applications on AWS and OpenShift using Docker & Kubernetes.
@@ -77,25 +81,25 @@ html { scroll-behavior: smooth; }
 
   <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6">
 
-    <div class="bg-gray-700 p-6 rounded-xl text-center">
+    <div class="bg-gray-700 p-6 rounded-xl text-center hover:scale-105 transition">
       <img src="https://img.icons8.com/color/96/java-coffee-cup-logo.png" class="mx-auto mb-3">
-      <h3 class="font-semibold">Backend</h3>
+      <h3 class="font-semibold text-lg">Backend</h3>
       <p class="text-gray-400 text-sm mt-2">
         Java, Spring Boot, Microservices, REST APIs
       </p>
     </div>
 
-    <div class="bg-gray-700 p-6 rounded-xl text-center">
+    <div class="bg-gray-700 p-6 rounded-xl text-center hover:scale-105 transition">
       <img src="https://img.icons8.com/color/96/amazon-web-services.png" class="mx-auto mb-3">
-      <h3 class="font-semibold">Cloud</h3>
+      <h3 class="font-semibold text-lg">Cloud</h3>
       <p class="text-gray-400 text-sm mt-2">
         AWS, OCP, Docker, Kubernetes, CI/CD
       </p>
     </div>
 
-    <div class="bg-gray-700 p-6 rounded-xl text-center">
+    <div class="bg-gray-700 p-6 rounded-xl text-center hover:scale-105 transition">
       <img src="https://img.icons8.com/color/96/react-native.png" class="mx-auto mb-3">
-      <h3 class="font-semibold">Frontend</h3>
+      <h3 class="font-semibold text-lg">Frontend</h3>
       <p class="text-gray-400 text-sm mt-2">
         React JS, Redux, JavaScript
       </p>
@@ -114,9 +118,8 @@ html { scroll-behavior: smooth; }
       <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
       <div class="p-5">
         <h3 class="text-xl font-semibold">Banking Microservices</h3>
-        <p class="text-gray-400 mt-2">
-          Spring Boot, Kafka, Distributed Systems
-        </p>
+        <p class="text-gray-400 mt-2">Spring Boot, Kafka, Distributed Systems</p>
+        <a href="#" class="text-blue-400 text-sm mt-3 inline-block">View Code →</a>
       </div>
     </div>
 
@@ -124,9 +127,8 @@ html { scroll-behavior: smooth; }
       <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d1">
       <div class="p-5">
         <h3 class="text-xl font-semibold">Cloud Deployment</h3>
-        <p class="text-gray-400 mt-2">
-          AWS, Docker, Kubernetes, OpenShift
-        </p>
+        <p class="text-gray-400 mt-2">AWS, Docker, Kubernetes</p>
+        <a href="#" class="text-blue-400 text-sm mt-3 inline-block">View Code →</a>
       </div>
     </div>
 
@@ -134,36 +136,24 @@ html { scroll-behavior: smooth; }
       <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
       <div class="p-5">
         <h3 class="text-xl font-semibold">Full Stack App</h3>
-        <p class="text-gray-400 mt-2">
-          React + Spring Boot + REST APIs
-        </p>
+        <p class="text-gray-400 mt-2">React + Spring Boot</p>
+        <a href="#" class="text-blue-400 text-sm mt-3 inline-block">View Code →</a>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- EXTRA IMAGE SECTION -->
-<section class="py-16 bg-gray-900">
-  <h2 class="text-3xl text-center font-bold mb-10">Technology & Work</h2>
-
-  <div class="grid md:grid-cols-3 gap-6 px-6 max-w-6xl mx-auto">
-    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" class="rounded-xl">
-    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd" class="rounded-xl">
-    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" class="rounded-xl">
-  </div>
-</section>
-
-<!-- PREMIUM FOOTER -->
+<!-- FOOTER -->
 <footer id="contact" class="bg-black text-gray-300 py-12">
 
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
 
     <div>
-      <h2 class="text-2xl font-bold text-white">Your Name</h2>
+      <h2 class="text-2xl font-bold text-white">Amit Singh</h2>
       <p class="mt-3 text-gray-400">
         Java Full Stack Developer specializing in scalable backend systems,
-        cloud deployments, and modern web applications.
+        cloud deployments, and modern applications.
       </p>
     </div>
 
@@ -179,7 +169,7 @@ html { scroll-behavior: smooth; }
     <div>
       <h3 class="text-lg font-semibold text-white mb-3">Contact</h3>
       <p>Email: amitsinghtechz6@gmail.com</p>
-      <p>Mobile: +91 790679128</p>
+      <p>Mobile: +91 7906791280</p>
 
       <div class="flex space-x-4 mt-4">
         <a href="https://github.com/AmitSingh-techz5" class="hover:text-blue-400">GitHub</a>
@@ -187,7 +177,7 @@ html { scroll-behavior: smooth; }
       </div>
 
       <a href="resume.pdf"
-         class="inline-block mt-4 bg-blue-500 px-4 py-2 rounded-lg text-white">
+         class="inline-block mt-4 bg-blue-500 px-4 py-2 rounded-lg text-white hover:bg-blue-600">
         Download Resume
       </a>
     </div>
@@ -195,7 +185,7 @@ html { scroll-behavior: smooth; }
   </div>
 
   <div class="text-center text-gray-500 mt-10 border-t border-gray-800 pt-4">
-    © 2026 Your Name. All rights reserved.
+    © 2026 Amit Singh. All rights reserved.
   </div>
 
 </footer>
